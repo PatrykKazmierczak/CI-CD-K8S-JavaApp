@@ -1,0 +1,51 @@
+version: 2.1  # The version of the CircleCI configuration file.
+
+jobs:
+  build:
+    working_directory: ~/sapp  # Set the working directory for the job.
+    parallelism: 1  # Limit the number of parallel job executions to 1.
+    docker:
+      - image: cimg/openjdk:11.0  # Use the specified Docker image as the execution environment.
+    steps:
+      - checkout:  # Checkout the source code into the specified path.
+          path: ~/sapp
+      - run:
+          name: Build  # Name of the run step (for display purposes).
+          command: mvn -B clean package  # Build the project using Maven.
+
+  test:
+    working_directory: ~/sapp  # Set the working directory for the job.
+    parallelism: 1  # Limit the number of parallel job executions to 1.
+    docker:
+      - image: cimg/openjdk:11.0  # Use the specified Docker image as the execution environment.
+    steps:
+      - checkout:  # Checkout the source code into the specified path.
+          path: ~/sapp
+      - run:
+          name: Test  # Name of the run step (for display purposes).
+          command: mvn test  # Run tests using Maven.
+
+  # Define a new job for canary deployment
+  canary-deploy:
+    working_directory: ~/sapp  # Set the working directory for the job.
+    parallelism: 1  # Limit the number of parallel job executions to 1.
+    docker:
+      - image: cimg/openjdk:11.0  # Use the specified Docker image as the execution environment.
+    steps:
+      - checkout:  # Checkout the source code into the specified path.
+          path: ~/sapp
+      - run:
+          name: Canary Deploy  # Name of the run step (for display purposes).
+          command: mvn tomcat7:redeploy -Dcanary=true  # Perform canary deployment using Maven.
+
+# Orchestrate jobs using workflows
+workflows:
+  sample:  # Name of the workflow.
+    jobs:
+      - build  # Include the build job in this workflow.
+      - test:  # Include the test job in this workflow.
+          requires:  # Specify that the test job depends on the build job.
+            - build
+      - canary-deploy:  # Include the canary-deploy job in this workflow.
+          requires:  # Specify that the canary-deploy job depends on the test job.
+            - test

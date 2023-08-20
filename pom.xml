@@ -17,7 +17,7 @@
 
 <!--    17 do not work with circleci-->
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
     <packaging>war</packaging>
     <profiles>
@@ -29,6 +29,9 @@
         </profile>
         <profile>
             <id>docker</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <spring.profiles.active>docker</spring.profiles.active>
             </properties>
@@ -41,9 +44,6 @@
         </profile>
         <profile>
             <id>ci</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <spring.profiles.active>ci</spring.profiles.active>
             </properties>

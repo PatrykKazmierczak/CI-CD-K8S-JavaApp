@@ -1,7 +1,7 @@
 # Sapp-App
 
 <div align="center">
-  <img src="icon.png" alt="Project Icon">
+  <img src="C:\Users\patro\OneDrive\Pulpit\256x256bb.jpg" alt="Project Icon">
 </div>
 
 ## Description

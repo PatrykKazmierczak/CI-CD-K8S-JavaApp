@@ -18,7 +18,6 @@
         <java.version>17</java.version>
     </properties>
     <packaging>war</packaging>
-
     <profiles>
         <profile>
             <id>dev</id>

@@ -5,7 +5,7 @@ jobs:
     working_directory: ~/sapp  # Set the working directory for the job.
     parallelism: 1  # Limit the number of parallel job executions to 1.
     docker:
-      - image: cimg/openjdk:11.0  # Use the specified Docker image as the execution environment.
+      - image: cimg/openjdk:17.0  # Use the specified Docker image as the execution environment.
     steps:
       - checkout:  # Checkout the source code into the specified path.
           path: ~/sapp
@@ -17,7 +17,7 @@ jobs:
     working_directory: ~/sapp  # Set the working directory for the job.
     parallelism: 1  # Limit the number of parallel job executions to 1.
     docker:
-      - image: cimg/openjdk:11.0  # Use the specified Docker image as the execution environment.
+      - image: cimg/openjdk:17.0  # Use the specified Docker image as the execution environment.
     steps:
       - checkout:  # Checkout the source code into the specified path.
           path: ~/sapp
@@ -30,7 +30,7 @@ jobs:
     working_directory: ~/sapp  # Set the working directory for the job.
     parallelism: 1  # Limit the number of parallel job executions to 1.
     docker:
-      - image: cimg/openjdk:11.0  # Use the specified Docker image as the execution environment.
+      - image: cimg/openjdk:17.0  # Use the specified Docker image as the execution environment.
     steps:
       - checkout:  # Checkout the source code into the specified path.
           path: ~/sapp

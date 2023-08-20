@@ -27,9 +27,6 @@
         </profile>
         <profile>
             <id>docker</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <spring.profiles.active>docker</spring.profiles.active>
             </properties>
@@ -38,6 +35,15 @@
             <id>prod</id>
             <properties>
                 <spring.profiles.active>prod</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>ci</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.active>ci</spring.profiles.active>
             </properties>
         </profile>
     </profiles>
@@ -72,8 +78,6 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-
-
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -116,11 +120,11 @@
                 <version>2.2</version>
                 <configuration>
                     <!--<url>http://89.74.210.195:8090/manager/text</url>--> -->
-<!--                    <url>http://192.168.100.92:8080/manager/text</url>-->
+                    <url>http://35.158.126.81:8080/manager/text</url>
                     <!-- Use for local Tomcat: -->
-                    <url>http://localhost:8080/manager/text</url>
+<!--                    <url>http://localhost:8080/manager/text</url>-->
                     <server>TomcatServer</server>
-                    <path>/sapp-test-prod</path>
+                    <path>/sapp</path>
                     <username>admin</username>
                     <password>admin</password>
                 </configuration>

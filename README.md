@@ -1,7 +1,7 @@
 # Sapp-App
 
 <div align="center">
-  <img src="C:\Users\patro\OneDrive\Pulpit" alt="256x256bb.jpg">
+  <img src="256x256bb.jpg" alt="256x256bb.jpg">
 </div>
 
 ## Description

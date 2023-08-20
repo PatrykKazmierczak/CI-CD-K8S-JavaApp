@@ -1,0 +1,4 @@
+1. Terraform Code Infrastructure Deployment
+2. Terraform Code ECR
+3. Terraform Code RDS
+4. Add application local,

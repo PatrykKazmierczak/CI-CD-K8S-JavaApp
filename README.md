@@ -1,9 +1,5 @@
 # Sapp-App
 
-<div align="center">
-  <img src="256x256bb.jpg" alt="256x256bb.jpg">
-</div>
-
 ## Description
 This repository contains a Spring Boot project named "Sapp-App," designed to function as a robust Security Application. The project employs the Spring Boot Starter Parent version 2.5.6 and is developed using Java 11.
 

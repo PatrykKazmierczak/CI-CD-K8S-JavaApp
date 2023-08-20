@@ -1,4 +1,4 @@
 1. Terraform Code Infrastructure Deployment
 2. Terraform Code ECR
 3. Terraform Code RDS
-4. Add application local,
+4. Check why app is not running on deployed server

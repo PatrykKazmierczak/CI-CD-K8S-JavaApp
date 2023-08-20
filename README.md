@@ -1,7 +1,7 @@
 # Sapp-App
 
 ## Description
-This repository contains a Spring Boot project named "Sapp-App," designed to function as a robust Security Application. The project employs the Spring Boot Starter Parent version 2.5.6 and is developed using Java 11.
+This repository contains a Spring Boot project named "Sapp-App," designed to function as a robust Security Application. The project employs the Spring Boot Starter Parent version 2.5.6 and is developed using Java 17.
 
 ## Profiles 🚀
 The project encompasses several distinct profiles:
@@ -39,7 +39,7 @@ The project build is adeptly managed through Maven plugins:
   - Displays the current active profile during the generate-resources phase.
 
 ## How to Build and Run ▶️
-1. Verify the presence of Java 11 on your system.
+1. Verify the presence of Java 17 on your system.
 2. Execute the following Maven command to initiate the build process:
    ```bash
    mvn clean install

@@ -92,7 +92,7 @@
         <input type="button" value="Register" onclick="window.location.href='register-page'; return false;"
                class="w-100 btn btn-lg btn-dark" style="margin-top: 10px">
 
-        <p class="mt-5 mb-3 text-muted">SAPP 2022</p>
+        <p class="mt-5 mb-3 text-muted">SAPP 2023</p>
     </form:form>
 </main>
 </body>

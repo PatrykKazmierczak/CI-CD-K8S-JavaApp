@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sapp-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sapp-app
+  template:
+    metadata:
+      name: app
+      labels:
+        app: sapp-app
+    spec:
+      containers:
+        - name: app
+          image: patronix9345/sapp-app:0.0.2
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            periodSeconds: 12
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            periodSeconds: 2
+            initialDelaySeconds: 8

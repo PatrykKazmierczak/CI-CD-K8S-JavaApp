@@ -3,29 +3,31 @@ kind: Deployment
 metadata:
   name: sapp-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: sapp-app
   template:
     metadata:
-      name: app
+      name: sapp
       labels:
         app: sapp-app
     spec:
       containers:
-        - name: app
-          image: patronix9345/sapp-app:0.0.3
+        - name: sapp
+          image: patronix9345/sapp-app:v1.0
           ports:
             - containerPort: 8080
           livenessProbe:
             httpGet:
               path: /healthz
               port: 8080
-            periodSeconds: 12
+            periodSeconds: 3
           readinessProbe:
             httpGet:
               path: /healthz
               port: 8080
-            periodSeconds: 2
-            initialDelaySeconds: 8
+            periodSeconds: 6
+          envFrom:
+            - secretRef:
+                name: sapp-app

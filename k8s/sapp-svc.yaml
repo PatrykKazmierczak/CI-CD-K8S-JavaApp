@@ -6,5 +6,5 @@ spec:
   selector:
     app: sapp-app
   ports:
-    - port: 80
+    - port: 8080
       targetPort: 8080

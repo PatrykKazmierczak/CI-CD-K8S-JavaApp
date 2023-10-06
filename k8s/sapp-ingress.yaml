@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sapp-app
+spec:
+  rules:
+    - host: sapp-final.192.168.58.2.nip.io
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: sapp-app
+                port:
+                  number: 8080

@@ -28,6 +28,12 @@
             </properties>
         </profile>
         <profile>
+            <id>k8s</id>
+            <properties>
+                <spring.profiles.active>k8s</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
             <id>docker</id>
             <activation>
                 <activeByDefault>true</activeByDefault>

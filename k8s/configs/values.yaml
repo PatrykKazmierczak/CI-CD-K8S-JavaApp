@@ -4,5 +4,5 @@ primary:
     size: 2Gi
 auth:
   username: postgres
-  # password: Kub3P4ss
+  # password: password
   database: sapp

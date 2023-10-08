@@ -3,6 +3,6 @@ primary:
     enabled: true
     size: 2Gi
 auth:
-  username: sapp
+  username: postgres
   # password: password
   database: sapp

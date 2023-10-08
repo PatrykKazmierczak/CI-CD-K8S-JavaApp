@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sapp-app-deployment
+  name: sapp-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: sapp-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: sapp-app
-          image: patronix9345/sapp-app:v1.4
+          image: patronix9345/sapp-app:v1.0
           ports:
             - containerPort: 8080
           env:

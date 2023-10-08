@@ -9,13 +9,13 @@ spec:
       app: sapp-app
   template:
     metadata:
-      name: sapp
+      name: sapp-app
       labels:
         app: sapp-app
     spec:
       containers:
-        - name: sapp
-          image: patronix9345/sapp-app:v1.1
+        - name: sapp-app
+          image: patronix9345/sapp-app:v1.0
           ports:
             - containerPort: 8080
           livenessProbe:

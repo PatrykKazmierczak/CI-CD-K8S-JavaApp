@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: sapp
-          image: patronix9345/sapp-app:v1.0
+          image: patronix9345/sapp-app:v1.1
           ports:
             - containerPort: 8080
           livenessProbe:

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sapp-token
+  annotations:
+    kubernetes.io/service-account.name: sapp-app
+type: kubernetes.io/service-account-token

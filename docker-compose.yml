@@ -13,7 +13,7 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_PASSWORD=ds33h9jb3q
+      - POSTGRES_PASSWORD=arYhTbJTjW
       - POSTGRES_USER=postgres
       - POSTGRES_DB=sapp
       

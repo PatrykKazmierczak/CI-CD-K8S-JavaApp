@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: sapp-app
 spec:
-  replicas: 3
+  replicas: 6
   selector:
     matchLabels:
       app: sapp-app
@@ -17,6 +17,16 @@ spec:
           image: patronix9345/sapp-app:v1.0
           ports:
             - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            periodSeconds: 6
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            periodSeconds: 3
           env:
             - name: POSTGRES_HOST
               value: postgresql

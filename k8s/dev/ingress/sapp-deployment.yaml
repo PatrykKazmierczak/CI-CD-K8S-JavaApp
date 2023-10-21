@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: sapp-app
 spec:
-  replicas: 6
+  replicas: 0
   selector:
     matchLabels:
       app: sapp-app
@@ -30,3 +30,32 @@ spec:
           env:
             - name: POSTGRES_HOST
               value: postgresql
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgresql
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: postgresql
+  template:
+    metadata:
+      labels:
+        app: postgresql
+    spec:
+      containers:
+        - name: postgresql
+          image: patronix9345/postgres:v1.0
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_PASSWORD
+              value: password
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_DB
+              value: sapp

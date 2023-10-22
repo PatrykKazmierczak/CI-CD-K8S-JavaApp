@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app: postgresql
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 5432

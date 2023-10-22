@@ -1,0 +1,10 @@
+provider: digitalocean
+logLevel: debug
+domainFilters:
+  - patronix-systems.org
+env:
+  - name: DO_TOKEN
+    valueFrom:
+      secretKeyRef:
+        name: digitalocean-token
+        key: TOKEN

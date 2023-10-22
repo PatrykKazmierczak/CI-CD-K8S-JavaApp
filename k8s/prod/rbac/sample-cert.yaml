@@ -1,0 +1,23 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: test1-cert
+spec:
+  secretName: test1-cert-tls
+  duration: 4h
+  renewBefore: 2h
+
+  isCA: false
+  privateKey:
+    algorithm: RSA
+    encoding: PKCS1
+    size: 2048
+  usages:
+    - server auth
+    - client auth
+  dnsNames:
+    - test1.patronix-systems.org
+
+  issuerRef:
+    name: digitalocean
+    kind: ClusterIssuer

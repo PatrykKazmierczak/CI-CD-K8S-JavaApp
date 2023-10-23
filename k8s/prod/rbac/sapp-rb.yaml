@@ -5,7 +5,7 @@ metadata:
   namespace: default
 subjects:
 - kind: ServiceAccount
-  name: sapp-app
+  name: sapp
   namespace: default
 roleRef:
   kind: ClusterRole 

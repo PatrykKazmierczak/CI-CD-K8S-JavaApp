@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: sapp-app
+  name: sapp
 spec:
   minReplicas: 3
   maxReplicas: 12
@@ -15,7 +15,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: sapp-app
+    name: sapp
   behavior:
     scaleDown:
       stabilizationWindowSeconds: 60

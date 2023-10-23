@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sapp-app
+  name: sapp
 spec:
   strategy:
     type: Recreate
   replicas: 2
   selector:
     matchLabels:
-      app: sapp-app
+      app: sapp
   template:
     metadata:
       labels:
-        app: sapp-app
+        app: sapp
     spec:
-      serviceAccount: sapp-app
+      serviceAccount: sapp
       priorityClassName: critical-apps
       containers:
-        - name: sapp-app
+        - name: sapp
           image: patronix9345/sapp-app:v1.0
           ports:
             - containerPort: 8080

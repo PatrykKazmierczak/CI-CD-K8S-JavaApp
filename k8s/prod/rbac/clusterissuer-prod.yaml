@@ -17,4 +17,4 @@ spec:
               key: TOKEN
         selector:
           dnsZones:
-            - "patronix-systems.org"
+            - "patronix-systems.pl"

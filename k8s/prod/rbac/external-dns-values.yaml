@@ -1,10 +1,10 @@
-provider: digitalocean
+provider: cloudflare
 logLevel: debug
 domainFilters:
-  - patronix-systems.pl
+  - patronix-systems.org
 env:
   - name: DO_TOKEN
     valueFrom:
       secretKeyRef:
-        name: digitalocean-token
+        name: cloudflare-token
         key: TOKEN

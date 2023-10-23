@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: sapp
   annotations:
-    external-dns.alpha.kubernetes.io/hostname: sapp.patronix-systems.pl
+    external-dns.alpha.kubernetes.io/hostname: sapp.patronix-systems.org
 spec:
   selector:
     app: sapp

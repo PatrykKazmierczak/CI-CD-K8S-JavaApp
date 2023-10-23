@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: digitalocean
+  name: cloudflare-stage
 spec:
   acme:
     # PLEASE CHANGE IT
@@ -13,8 +13,8 @@ spec:
       - dns01:
           digitalocean:
             tokenSecretRef:
-              name: digitalocean-token
+              name: cloudflare-token
               key: TOKEN
         selector:
           dnsZones:
-            - "patronix-systems.pl"
+            - "patronix-systems.org"

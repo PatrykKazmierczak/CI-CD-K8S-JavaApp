@@ -3,15 +3,15 @@ kind: Ingress
 metadata:
   name: sapp
   annotations:
-    cert-manager.io/cluster-issuer: digitalocean-prod
+    cert-manager.io/cluster-issuer: cloudflare-prod
     kubernetes.io/tls-acme: "true"
 spec:
   rules:
-    - host: sapp.patronix-systems.pl
+    - host: sapp.patronix-systems.org
       http:
         paths:
           - pathType: Prefix
-            path: /web/login/register-page
+            path: /
             backend:
               service:
                 name: sapp
@@ -19,5 +19,5 @@ spec:
                   number: 80
   tls:
     - hosts:
-        - sapp.patronix-systems.pl
+        - sapp.patronix-systems.org
       secretName: sapp-ingress

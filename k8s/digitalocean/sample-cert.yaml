@@ -16,7 +16,7 @@ spec:
     - server auth
     - client auth
   dnsNames:
-    - test1.patronix-systems.pl
+    - test1.patronix-systems.com
 
   issuerRef:
     name: digitalocean-prod

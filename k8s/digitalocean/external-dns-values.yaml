@@ -1,7 +1,7 @@
 provider: digitalocean
 logLevel: debug
 domainFilters:
-  - patronix-systems.pl
+  - patronix-systems.com
 env:
   - name: DO_TOKEN
     valueFrom:

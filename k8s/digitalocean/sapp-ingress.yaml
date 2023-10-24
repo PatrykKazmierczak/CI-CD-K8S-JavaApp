@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/tls-acme: "true"
 spec:
   rules:
-    - host: sapp.patronix-systems.pl
+    - host: sapp.patronix-systems.com
       http:
         paths:
           - pathType: Prefix
@@ -19,5 +19,5 @@ spec:
                   number: 80
   tls:
     - hosts:
-        - sapp.patronix-systems.pl
+        - sapp.patronix-systems.com
       secretName: sapp-ingress

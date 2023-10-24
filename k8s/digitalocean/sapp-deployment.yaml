@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sapp
+spec:
+  strategy:
+    type: Recreate
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sapp
+  template:
+    metadata:
+      labels:
+        app: sapp
+    spec:
+      serviceAccount: sapp
+      priorityClassName: critical-apps
+      containers:
+        - name: sapp
+          image: patronix9345/sapp-app:v1.0
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
+            limits:
+              cpu: 250m
+          env:
+            - name: POSTGRES_HOST
+              value: postgresql

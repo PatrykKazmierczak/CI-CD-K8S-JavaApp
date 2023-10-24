@@ -16,8 +16,8 @@ spec:
     - server auth
     - client auth
   dnsNames:
-    - test1.patronix-systems.org
+    - test1.patronix-systems.pl
 
   issuerRef:
-    name: cloudflare
+    name: digitalocean-prod
     kind: ClusterIssuer

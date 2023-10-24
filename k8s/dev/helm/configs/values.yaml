@@ -1,7 +1,0 @@
-primary:
-  persistence:
-    enabled: true
-    size: 2Gi
-auth:
-  username: postgres
-  database: sapp

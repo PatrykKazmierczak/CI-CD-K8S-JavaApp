@@ -1,0 +1,8 @@
+apiVersion: postgres-operator.crunchydata.com/v1beta1
+kind: PGUpgrade
+metadata:
+  name: mycluster-14-to-15
+spec:
+  postgresClusterName: mycluster
+  toPostgresVersion: 15
+  fromPostgresVersion: 14

@@ -32,3 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 
+### postgres-operator-examples ###
+k8s/operator/postgres-operator-examples
+

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sapp
+  namespace: sapp
 spec:
   strategy:
     type: Recreate

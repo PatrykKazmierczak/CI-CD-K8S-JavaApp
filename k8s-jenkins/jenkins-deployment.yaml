@@ -18,3 +18,10 @@ spec:
           ports:
             - containerPort: 8080
             - containerPort: 50000
+          volumeMounts:
+            - name: jenkins-data
+              mountPath: /var/jenkins_home  # Mount path within the container
+      volumes:
+        - name: jenkins-data
+          persistentVolumeClaim:
+            claimName: jenkins-pvc  # Reference the PVC name here

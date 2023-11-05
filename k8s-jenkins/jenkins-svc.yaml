@@ -6,9 +6,11 @@ spec:
   selector:
     app: jenkins
   ports:
-  - protocol: TCP
-    port: 31000
-    targetPort: 31000
-  - protocol: TCP
-    port: 50000
-    targetPort: 50000
+    - name: http
+      protocol: TCP
+      port: 31000
+      targetPort: 31000
+    - name: jnlp
+      protocol: TCP
+      port: 50000
+      targetPort: 50000

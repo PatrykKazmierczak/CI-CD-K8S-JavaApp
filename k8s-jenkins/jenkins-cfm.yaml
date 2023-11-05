@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: jenkins-config
-data:
-  JENKINS_OPTS: "--prefix=/jenkins"
-  JENKINS_FEATURES: "simple-theme-manager:0.5.1 configuration-as-code:1.43"

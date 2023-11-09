@@ -1,13 +1,13 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: sapp-ingress
-  namespace: default
+  name: sapp
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: digitalocean-prod
+    kubernetes.io/tls-acme: "true"
 spec:
   rules:
-    - host: sapp.local  # Update this line
+    - host: app.patronix-systems.com
       http:
         paths:
           - pathType: Prefix
@@ -16,4 +16,8 @@ spec:
               service:
                 name: sapp
                 port:
-                  number: 8080
+                  number: 80
+  tls:
+    - hosts:
+        - app.patronix-systems.com
+      secretName: sapp-ingress                  

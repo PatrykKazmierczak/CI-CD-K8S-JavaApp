@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  app:
+    container_name: sapp
+    image: sapp-app
+    build: ./
+    platforms:
+      - linux/amd64  # Specify the desired platform
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresql
+
+  postgresql:
+    image: arm64v8/postgres
+    platforms:
+      - linux/arm64  # Specify the desired platform
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=sapp

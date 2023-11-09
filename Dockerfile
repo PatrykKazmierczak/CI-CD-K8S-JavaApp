@@ -1,4 +1,5 @@
-FROM openjdk:17-jdk-alpine
+# FROM openjdk:17-jdk-alpine
+FROM arm64v8/openjdk:17-jdk-slim-buster
 MAINTAINER experto.com
 VOLUME /tmp
 EXPOSE 8080

@@ -1,7 +1,0 @@
-apiVersion: scheduling.k8s.io/v1
-kind: PriorityClass
-metadata:
-  name: critical-apps
-description: Critical apps that must serve requests from customers
-preemptionPolicy: PreemptLowerPriority
-value: 70000000

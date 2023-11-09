@@ -16,10 +16,9 @@ spec:
         app: sapp
     spec:
       serviceAccount: sapp
-      priorityClassName: critical-apps
       containers:
         - name: sapp
-          image: patronix9345/sapp-app:v4.0
+          image: patronix9345/sapp-app:v1.0
           ports:
             - containerPort: 8080
           resources:
@@ -27,6 +26,6 @@ spec:
               cpu: 100m
             limits:
               cpu: 250m
-          # env:
-          #   - name: POSTGRES_HOST
-          #     value: postgresql
+          env:
+            - name: POSTGRES_HOST
+              value: postgresql

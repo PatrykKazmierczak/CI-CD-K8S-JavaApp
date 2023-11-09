@@ -9,7 +9,7 @@ services:
     depends_on:
       - postgresql
   postgresql:
-    image: postgres
+    image: arm64v8/postgres
     ports:
       - "5432:5432"
     environment:

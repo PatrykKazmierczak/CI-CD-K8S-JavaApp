@@ -3,8 +3,9 @@ version: '3.1'
 services:
   app:
     container_name: sapp
-    image: sapp-app
-    build: ./
+    build:
+      context: ./
+      dockerfile: Dockerfile
     platforms:
       - linux/amd64  # Specify the desired platform
     ports:

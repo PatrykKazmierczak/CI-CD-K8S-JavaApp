@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: postgresql
-          image: patronix9345/postgres:v1.0
+          image: patronix9345/postgres:orangepi
           ports:
             - containerPort: 5432
           env:

@@ -1,0 +1,28 @@
+minio:
+  enabled: true
+monitoring:
+  dashboards:
+    enabled: true
+    namespace: kube-prometheus-stack
+  rules:
+    namespace: kube-prometheus-stack
+    labels:
+      release: kube-prometheus-stack
+  serviceMonitor:
+    labels:
+      release: kube-prometheus-stack
+
+backend:
+  replicas: 2
+  affinity: {}
+write:
+  replicas: 2
+  affinity: {}
+read:
+  replicas: 2
+  affinity: {}
+gateway:
+  affinity: {}
+
+loki:
+  auth_enabled: false

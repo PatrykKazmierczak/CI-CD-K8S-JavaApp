@@ -1,0 +1,44 @@
+pipeline {
+    agent any 
+
+    stages {
+        stage('Checkout') { 
+            steps { 
+                // Checkout code from the configured repository
+                checkout scm
+            }
+        }
+        stage('Build') { 
+            steps { 
+                // Replace with your build commands
+                echo 'Building..' 
+            }
+        }
+        stage('Test'){
+            steps {
+                // Replace with your test commands
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Replace with your deploy commands
+                echo 'Deploying....'
+            }
+        }
+    }
+    post {
+        always {
+            // This block executes after the pipeline run, regardless of the run result
+            echo 'This will always run'
+        }
+        success {
+            // This block executes only if the pipeline run is successful
+            echo 'Run was a success'
+        }
+        failure {
+            // This block executes only if the pipeline run failed
+            echo 'Run failed'
+        }
+    }
+}

@@ -29,15 +29,15 @@
         </profile>
         <profile>
             <id>k8s</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <spring.profiles.active>k8s</spring.profiles.active>
             </properties>
         </profile>
         <profile>
             <id>docker</id>
-             <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <spring.profiles.active>docker</spring.profiles.active>
             </properties>

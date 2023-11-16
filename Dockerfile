@@ -1,5 +1,4 @@
-# FROM openjdk:17-jdk-alpine
-FROM arm64v8/openjdk:17-jdk-slim-buster
+FROM openjdk:17-jdk-alpine
 MAINTAINER experto.com
 VOLUME /tmp
 EXPOSE 8080
@@ -12,4 +11,3 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/sapp.war"]
 
 
 
-docker 
